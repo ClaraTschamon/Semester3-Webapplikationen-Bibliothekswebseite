@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formular</title>
+        <meta charset="UTF-8">
+        <meta name="keywords" content="Bibliothek, Blons, Ausleihen, Leihen, Bibliohteksabo,
+        Bücher, Filme, Zeitschriften, Spiele, Ludothek">
+        <meta name="description" content="Webseite der Bibliothek Blons">
+        <meta name="author" content="Clara Tschamon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="Browseransicht.css">
+        <link rel="stylesheet" type="text/css" href="Druckansicht.css" media="print"/>
+        <script defer type="text/javascript" src="SaveCookie.js"></script>
+    </head>
+    <body>
+        <!--zurückpfeil-->
+        <div class="topbar">
+            <div class="left">
+                <a href="home.html">
+                    <img src="bilder/icons/zurueckpfeil.png" id="back" alt="zurück Pfeil">
+                </a>
+            </div>
+        </div>
+
+        <div class="centerContent">
+            <h1>Formular zum beantragen einer User-ID und eines Passworts</h1>
+            <div class="container">
+                <form id="form"
+                      action="mailto:clara.tschamon@students.fhv.at?subject=Formular Bibliothek"
+                      name="Anfrage"
+                      method="POST">
+
+                    <div class="input-control">
+                        <label for="firstName" class="bold">Vorname <br/></label>
+                        <input name="Vorname" id="firstName" type="text">
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input-control">
+                        <label for="lastName" class="bold">Nachname <br/> </label>
+                        <input name="Nachname" id="lastName" type="text">
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input-control">
+                        <label for="emailForm" class="bold">E-Mail Adresse <br/> </label>
+                        <input name="E-Mail Adresse" id="emailForm" type="text">
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input-control">
+                        <label for="address" class="bold">Adresse <br/></label>
+                        <textarea name="Adresse" id="address" rows="3"></textarea>
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input-control">
+                        <label for="country" class="bold">Herkunftsland <br/></label>
+                        <select name="Herkunftsland" id="country">
+                            <option value="auswählen">--Bitte auswählen--</option>
+                            <option value="Oesterreich">Österreich</option>
+                            <option value="Deutschland">Deutschland</option>
+                            <option value="Schweiz">Schweiz</option>
+                            <option value="andere">andere</option>
+                        </select>
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input-control">
+                        <label for="userID" class="bold">gewünschte User-ID <br/></label>
+                        <input name="User-ID" id="userID" type="text">
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input-control">
+                        <label for="password1" class="bold">Passwort <br/></label>
+                        <input name="Passwort" id="password1" type="password">
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input-control">
+                        <label for="password2" class="bold">Passwort bestätigen <br/></label>
+                        <input id="password2" type="password">
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input-control">
+                        <label class="bold" id="gender">Geschlecht</label>
+                        <div>
+                            <label for="genderMale"></label>
+                            <input type="radio" name="Geschlecht" id="genderMale" value="Männlich">
+                            Männlich
+                        </div>
+                        <div>
+                            <label for="genderFemale"></label>
+                            <input type="radio" name="Geschlecht" id="genderFemale" value="Weiblich">
+                            Weiblich
+                        </div>
+                        <div>
+                            <label for="genderDivers"></label>
+                            <input type="radio" name="Geschlecht" id="genderDivers" value="Divers">
+                            Divers
+                        </div>
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input-control">
+                        <label class="bold" id="mediatype">Ich interessiere mich für folgende Medientypen <br/></label>
+                        <input name="Medientyp" value="Buecher" id="books" type="checkbox">
+                        <label for="books">Bücher <br/></label>
+
+                        <input name="Medientyp" value="Zeitschriften" id="magazines" type="checkbox">
+                        <label for="magazines">Zeitschriften <br/></label>
+
+                        <input name="Medientyp" value="Filme" id="films" type="checkbox">
+                        <label for="films">Filme <br/></label>
+
+                        <input name="Medientyp" value="CDs" id="CDs" type="checkbox">
+                        <label for="CDs">CDs <br/></label>
+
+                        <input name="Medientyp" value="Spiele" id="games" type="checkbox">
+                        <label for="games">Spiele</label>
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="input-control">
+                        <label id="userCategory" class="bold">Nutzerkategorie</label>
+                        <div>
+                            <label for="categoryCustomer"></label>
+                            <input type="radio" name="Nutzerkategorie" id="categoryCustomer" value="Kunde/Kundin">
+                            Kunde/Kundin
+                        </div>
+                        <div>
+                            <label for="categoryEmployee"></label>
+                            <input type="radio" name="Nutzerkategorie" id="categoryEmployee" value="Mitarbeiter/in">
+                            Mitarbeiter/in
+                        </div>
+                        <div>
+                            <label for="categoryAdmin"></label>
+                            <input type="radio" name="Nutzerkategorie" id="categoryAdmin" value="Admin">
+                            Admin
+                        </div>
+                        <div class="error"></div>
+                    </div>
+
+                    <button type="reset">Zurücksetzen</button>
+                    <button type="submit">Absenden</button> <!--submit type damit enter taste auch submitted-->
+                </form>
+            </div>
+        </div>
+    </body>
+    <script src="FormValidation.js"></script>
+</html>

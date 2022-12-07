@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Filme</title>
+        <link rel="stylesheet" type="text/css" href="Browseransicht.css">
+        <link rel="stylesheet" type="text/css" href="Druckansicht.css" media="print"/>
+        <script defer type="text/javascript" src="SaveCookie.js"></script>
+    </head>
+    <body>
+        <!--Navbar-->
+        <div class="navbar">
+            <div class="left">
+                <a href="home.html"> <!--bild ist link zu startseite-->
+                    <img src="bilder/Logo.png" id="logo" alt="Email schreiben">
+                </a>
+            </div>
+            <div class="navbar">
+                <div class="dropdown">
+                    <button class="dropbtn">Unsere Medien
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="Buecher.html">Bücher</a>
+                        <a href="#">Zeitschriften</a>
+                        <a href="Filme.html">Filme</a>
+                        <a href="#">CDs</a>
+                        <a href="#">Spiele</a>
+                    </div>
+                </div>
+                <a href="mailto: blons@bibliothek.at" class="email">
+                    <img src="bilder/icons/email.png" id="email" alt="Email schreiben">
+                </a>
+                <a href="Formular.html" class="email">
+                    User ID und Passwort beantragen
+                </a>
+                <a href="./gaestebuch" class="email">
+                    Gästebuch
+                </a>
+            </div>
+        </div>
+
+        <h1>Unsere Filme</h1>
+        <h2>Thriller</h2>
+
+        <table class="tableMedia">
+            <tbody>
+            <tr>
+                <td><img src="bilder/bilderFilme/DaVinciCodeFilm.jpg" alt="Bild von Cover"></td>
+                <td>Titel: Der DaVinci Code</td>
+                <td>FSK: 16+</td>
+                <td>Format: DVD</td>
+                <td><a href="">Beschreibung</a></td>
+                <td>Verfügbar: Ja</td>
+                <td>Regal: 1</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h2>Kinderfilme</h2>
+        <table class="tableMedia">
+            <tbody>
+            <tr>
+                <td><img src="bilder/bilderFilme/KönigDerLöwenFilm.jpeg" alt="Bild von Cover"></td>
+                <td>Titel: Der König der Löwen</td>
+                <td>FSK: 4+</td>
+                <td>Format: DVD</td>
+                <td><a href="beschreibungen/KönigDerLöwenBeschreibung.html">Beschreibung</a></td>
+                <td>Verfügbar: Nein</td>
+                <td>Regal: 2</td>
+            </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
