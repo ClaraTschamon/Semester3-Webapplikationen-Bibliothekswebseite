@@ -1,5 +1,6 @@
 package at.fhv.bibliothekweb.controller;
 
+import at.fhv.bibliothekweb.model.AuthenticationBean;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
@@ -17,14 +18,39 @@ public class Controller extends HttpServlet {
         ServletContext application = getServletContext();
         HttpSession session = request.getSession();
         String dispatchto = "";
-        if(request.getParameter("dispatchto") != null){
+        if (request.getParameter("dispatchto") != null) {
             dispatchto = request.getParameter("dispatchto");
         }
-        if(dispatchto.equals("LogIn")){
+        if (dispatchto.equals("LogIn")) {
             String page = "/LogInView.jsp";
             RequestDispatcher dispatcher = application.getRequestDispatcher(page);
             dispatcher.forward(request, response);
             return;
+        }
+        if (dispatchto.equals("LogInUser")) { //in LogInView.jsp aufgerufen
+            AuthenticationBean authenticationBean = (AuthenticationBean) session.getAttribute("authenticationBean"); //wo setze ich das AuthenticationBean?
+
+            if(authenticationBean == null){
+                authenticationBean = new AuthenticationBean();
+                session.setAttribute("authenticationBean", authenticationBean);
+            }
+            String userID = request.getParameter("userID");
+            String password = request.getParameter("password");
+            System.out.println(userID);
+            System.out.println(password);
+            if(authenticationBean.checkUser(userID, password)){
+                String page = "/LogInSuccessView.jsp";
+                RequestDispatcher dispatcher = application.getRequestDispatcher(page);
+                System.out.println("Success");
+                session.setAttribute("loggedIn", true);
+                dispatcher.forward(request, response);;
+                return;
+            }else{
+                String page = "/LogInErrorView.jsp";
+                RequestDispatcher dispatcher = application.getRequestDispatcher(page);
+                dispatcher.forward(request, response);
+                return;
+            }
         }
     }
 

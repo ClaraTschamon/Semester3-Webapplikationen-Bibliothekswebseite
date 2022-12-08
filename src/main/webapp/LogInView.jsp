@@ -12,9 +12,9 @@
                 </TR>
                 <TR>
                     <TD width="17%">Password</TD>
-                    <TD width="83%"> <INPUT type="password" name="bankID" /> </TD>
+                    <TD width="83%"> <INPUT type="password" name="password" /> </TD>
                 </TR>
-                <INPUT type="hidden" name="dispatchto" value="MoneyTransfer" />
+                <INPUT type="hidden" name="dispatchto" value="LogInUser" />
             </TABLE>
             <P> <INPUT type="submit" name="OK" value="LogIn"> </P>
             <a href="Formular.html">Register</a>
