@@ -26,9 +26,9 @@
             <h1>Formular zum beantragen einer User-ID und eines Passworts</h1>
             <div class="container">
                 <form id="form"
-                      action="mailto:clara.tschamon@students.fhv.at?subject=Formular Bibliothek"
+                      action="Controller"
                       name="Anfrage"
-                      method="POST">
+                      method="GET">
 
                     <div class="input-control">
                         <label for="firstName" class="bold">Vorname <br/></label>
@@ -144,7 +144,8 @@
                     </div>
 
                     <button type="reset">Zurücksetzen</button>
-                    <button type="submit">Absenden</button> <!--submit type damit enter taste auch submitted-->
+                    <input type="hidden" name="dispatchto" value="RegisterUser">
+                    <button type="submit">Absenden</button>
                 </form>
             </div>
         </div>
