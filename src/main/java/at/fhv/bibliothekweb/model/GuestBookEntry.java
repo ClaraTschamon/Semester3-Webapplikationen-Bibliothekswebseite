@@ -1,3 +1,4 @@
+//Clara Tschamon
 package at.fhv.bibliothekweb.model;
 
 public class GuestBookEntry {

@@ -25,20 +25,8 @@
                         <div class="error"></div>
                     </div>
                     <input type="hidden" name="dispatchto" value="LogInUser" />
-                    <!--
-                    <table>
-                        <tr>
-                            <td>User ID</td>
-                            <td> <input type="text" name="userID" /> </td>
-                        </tr>
-                        <tr>
-                            <td>Passwort</td>
-                            <td> <input type="password" name="password" /> </td>
-                        </tr>
-                        <input type="hidden" name="dispatchto" value="LogInUser" />
-                    </table>-->
                     <button type="submit" name="OK" value="LogIn">LogIn</button>
-                    <a href="Formular.html">Registrieren</a>
+                    <a href="Controller?dispatchto=Formular.html">Registrieren</a>
                 </form>
             </div>
         </div>

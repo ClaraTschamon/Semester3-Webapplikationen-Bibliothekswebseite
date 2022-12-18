@@ -99,7 +99,7 @@ const validateInputs = () =>{
 
     if(userIDValue === ''){
         setError(userID,  'Pflichtfeld')
-    }else if(!isValidUserID(userIDValue)){
+    }else if(!isValidUserID(userIDValue)) {
         setError(userID, 'Muss zwischen 5 und 12 Zeichen lang sein und darf\n' +
             'nur Buchstaben und “_“, keine Leer- oder Sonderzeichen und keine Ziffern\n' +
             'enthalten')

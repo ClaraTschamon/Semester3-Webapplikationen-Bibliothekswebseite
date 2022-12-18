@@ -1,3 +1,4 @@
+//Clara Tschamon
 package at.fhv.bibliothekweb.model;
 
 import java.util.HashMap;

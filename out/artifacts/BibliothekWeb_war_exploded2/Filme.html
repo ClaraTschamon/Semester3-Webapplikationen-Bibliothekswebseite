@@ -6,13 +6,13 @@
         <title>Filme</title>
         <link rel="stylesheet" type="text/css" href="Browseransicht.css">
         <link rel="stylesheet" type="text/css" href="Druckansicht.css" media="print"/>
-        <script defer type="text/javascript" src="SaveCookie.js"></script>
+        <!--<script defer type="text/javascript" src="SaveCookie.js"></script>-->
     </head>
     <body>
         <!--Navbar-->
         <div class="navbar">
             <div class="left">
-                <a href="home.html"> <!--bild ist link zu startseite-->
+                <a href="Controller?dispatchto=home.html"> <!--bild ist link zu startseite-->
                     <img src="bilder/Logo.png" id="logo" alt="Email schreiben">
                 </a>
             </div>
@@ -22,9 +22,9 @@
                         <i class="fa fa-caret-down"></i>
                     </button>
                     <div class="dropdown-content">
-                        <a href="Buecher.html">Bücher</a>
+                        <a href="Controller?dispatchto=Buecher.html">Bücher</a>
                         <a href="#">Zeitschriften</a>
-                        <a href="Filme.html">Filme</a>
+                        <a href="Controller?dispatchto=Filme.html">Filme</a>
                         <a href="#">CDs</a>
                         <a href="#">Spiele</a>
                     </div>
@@ -32,11 +32,14 @@
                 <a href="mailto: blons@bibliothek.at" class="email">
                     <img src="bilder/icons/email.png" id="email" alt="Email schreiben">
                 </a>
-                <a href="Formular.html" class="email">
-                    User ID und Passwort beantragen
+                <a href="Controller?dispatchto=LogIn" class="email">
+                    LogIn
                 </a>
-                <a href="./gaestebuch" class="email">
+                <a href="Controller?dispatchto=./gaestebuch" class="email">
                     Gästebuch
+                </a>
+                <a href="Controller?dispatchto=History.jsp" class="email"> <!--href="./gaestebuch-->
+                    History
                 </a>
             </div>
         </div>
@@ -66,7 +69,7 @@
                 <td>Titel: Der König der Löwen</td>
                 <td>FSK: 4+</td>
                 <td>Format: DVD</td>
-                <td><a href="beschreibungen/KönigDerLöwenBeschreibung.html">Beschreibung</a></td>
+                <td><a href="Controller?dispatchto=beschreibungen/KönigDerLöwenBeschreibung.html">Beschreibung</a></td>
                 <td>Verfügbar: Nein</td>
                 <td>Regal: 2</td>
             </tr>

@@ -5,13 +5,13 @@
       <title>Bücher</title>
       <link rel="stylesheet" type="text/css" href="Browseransicht.css">
       <link rel="stylesheet" type="text/css" href="Druckansicht.css" media="print"/>
-      <script defer type="text/javascript" src="SaveCookie.js"></script>
+      <!--<script defer type="text/javascript" src="SaveCookie.js"></script>-->
   </head>
   <body>
     <!--Navbar-->
       <div class="navbar">
           <div class="left">
-              <a href="home.html"> <!--bild ist link zu startseite-->
+              <a href="Controller?dispatchto=home.html"> <!--bild ist link zu startseite-->
                   <img src="bilder/Logo.png" id="logo" alt="Email schreiben">
               </a>
           </div>
@@ -21,9 +21,9 @@
                       <i class="fa fa-caret-down"></i>
                   </button>
                   <div class="dropdown-content">
-                      <a href="Buecher.html">Bücher</a>
+                      <a href="Controller?dispatchto=Buecher.html">Bücher</a>
                       <a href="#">Zeitschriften</a>
-                      <a href="Filme.html">Filme</a>
+                      <a href="Controller?dispatchto=Filme.html">Filme</a>
                       <a href="#">CDs</a>
                       <a href="#">Spiele</a>
                   </div>
@@ -31,11 +31,14 @@
               <a href="mailto: blons@bibliothek.at" class="email">
                   <img src="bilder/icons/email.png" id="email" alt="Email schreiben">
               </a>
-              <a href="Formular.html" class="email">
-                  User ID und Passwort beantragen
+              <a href="Controller?dispatchto=LogIn" class="email">
+                  LogIn
               </a>
               <a href="./gaestebuch" class="email">
                   Gästebuch
+              </a>
+              <a href="Controller?dispatchto=History.jsp" class="email"> <!--href="./gaestebuch-->
+                  History
               </a>
           </div>
       </div>
@@ -49,7 +52,7 @@
                 <td><img src="bilder/bilderBuecher/HarryPotterTeil1.jpg" alt="Bild von Cover"></td>
                 <td>Titel: Harry Potter und der Stein der Weisen</td>
                 <td>Autor: J.K. Rowling</td>
-                <td><a href="beschreibungen/HarryPotter1Beschreibung.html">Beschreibung</a></td>
+                <td><a href="Controller?dispatchto=beschreibungen/HarryPotter1Beschreibung.html">Beschreibung</a></td>
                 <td>Verfügbar: Ja</td>
                 <td>Regal: 22</td>
             </tr>
@@ -85,7 +88,7 @@
                 <td><img src="bilder/bilderBuecher/GrimmMärchen.jpeg" alt="Bild von Cover"></td>
                 <td>Titel: Die schönsten Märchen</td>
                 <td>Autor: Gebrüder Grimm</td>
-                <td><a href="beschreibungen/GrimmMärchenBeschreibung.html">Beschreibung</a></td>
+                <td><a href="Controller?dispatchto=beschreibungen/GrimmMärchenBeschreibung.html">Beschreibung</a></td>
                 <td>Verfügbar: Nein</td>
                 <td>Regal: 13</td>
             </tr>
